@@ -25,8 +25,6 @@ class CustomTopo(Topo):
 
         self.fonout = fanout
 
-        print linkopts1
-
         # Add core switch
         cs_switch = self.addSwitch('cs%s' % 1)
 
@@ -76,6 +74,8 @@ def perTest():
     net.iperf( ( h1, h3 ) )
     h1, h5 = net.get('h1', 'h5')
     net.iperf( ( h1, h5 ) )
+    h1, h7 = net.get('h1', 'h7')
+    net.iperf( ( h1, h7 ) )
 
     net.stop()
 
